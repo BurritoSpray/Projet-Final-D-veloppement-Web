@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon Explorer</title>
+
+    <script type="module" src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dungeon Explorer</h1>
+    </header>
+    <main class="wrapper">
+        <div id="status-container">
+            <div id="lifebar">
+                <span id="player-health">40/40</span>
+                <div id="health-bar">
+                </div>
+            </div>
+            <div id="score-box">
+                Score:<span id="player-score"> 0</span>
+            </div>
+        </div>
+        <div id="game-container">
+            <div id="end-of-game">
+                <h1>Game Over</h1>
+                <div>
+                    Score: <span id="final-score">0</span>
+                </div>
+                <input id="retry-button" type="button" onclick="window.location.reload();" value="Retry (Press Enter)">
+            </div>
+            <table id="game-table"></table>
+            <div id="inventory-container">
+                <div id="inventory">
+                    <h2>Inventaire: </h2>
+                    <ol>
+                        <li id="inv-1"></li>
+                        <li id="inv-2"></li>
+                        <li id="inv-3"></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div id="instructions">
+            <h2>Instructions</h2>
+            <p>
+                Le but du jeu est de collecter le plus de points possible!
+                <br>
+                Si tu réussi a collecté tout les trésors tu sera accedera au niveau suivant.
+            </p>
+            <h3>Les objets</h3>
+            <p>
+            <ul>
+                <li>Les coffres : donnent +1000 points</li>
+                <li>Les bombes : Coutent 1 point de vie et d'étruise tout dans un rayon de 2 block</li>
+                <li>Les bombes en or : Coutent 0 point de vie et détruise seulement les pieges dans un rayon de 2 block
+                </li>
+                <li>Les coeurs : Redonnent 5 points de vie</li>
+
+            </ul>
+            </p>
+            <div id="controls">
+                <h3>Les contrôles</h3>
+                <div class="inline" style="flex-wrap: wrap;">
+                    <div>
+                        <h4>Deplacements</h4>
+                        <div id="arrowkey-container">
+                            <div id="key-up" style="margin: 0 6.5rem;">↑</div>
+                            <div id="key-left">←</div>
+                            <div id="key-down">↓</div>
+                            <div id="key-right">→</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Inventaire</h4>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <div id="numkey-1">1</div>
+                            <div id="numkey-2">2</div>
+                            <div id="numkey-3">3</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Quitter le dongeon</h4>
+                        <div id="space-bar">Espace</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="wrapper">
+        Copyright: William Goyette&copy;&Tab;
+        <br>
+        Credit: Jonathan Wilkie - Merci pour le cours, tu m'as appris à aimer le développement web!&hearts;
+    </footer>
+</body>
+
+</html>
